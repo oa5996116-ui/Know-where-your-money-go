@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MERO WEB</title>
+</head>
+<body>
+    
+    
+    <style>
+      /* CSS */
+
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #050816;
+    overflow: hidden;
+    font-family: Arial;
+}
+
+/* صفحة اللودنج */
+.loading-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+/* الدائرة */
+.loader{
+    width: 50px;
+    height: 50px;
+    border: 6px solid #1f2a44;
+    border-top: 6px solid #00e5ff;
+    border-radius: 50%;
+    
+    animation: spin 1s linear infinite,
+               glow 2s ease-in-out infinite;
+               
+    box-shadow: 0 0 20px #00e5ff55;
+    background-color: transparent;
+}
+
+/* النص */
+
+
+/* دوران */
+@keyframes spin{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* إضاءة */
+@keyframes glow{
+    0%{
+        box-shadow: 0 0 10px #00e5ff55;
+    }
+    
+    50%{
+        box-shadow: 0 0 35px #00e5ff;
+    }
+    
+    100%{
+        box-shadow: 0 0 10px #00e5ff55;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@keyframes typing{
+    from{
+        width:0;
+    }
+
+    to{
+        width:10ch;
+    }
+}
+
+@keyframes blink{
+    50%{
+        border-color:transparent;
+    }
+}
+
+
+
+
+h1{
+    color:white;
+    font-size:25px;
+    font-family:monospace;
+    letter-spacing:3px;
+
+    width:10ch;
+    overflow:hidden;
+    white-space:nowrap;
+
+    border-right:3px solid #00e5ff;
+
+    animation:
+    typing 3s steps(10) forwards,
+    blink .6s infinite;
+}
+    </style>
+    
+    
+<!-- HTML -->
+<div class="loading-page">
+    
+    <div class="loader"></div>
+    
+    <h1>LOADING..</h1>
+    
+</div>
+
+
+<script>
+    setTimeout(function(){
+    window.location.href = "dashboard.html";
+}, 4000); // 5000 = 5 ثواني
+</script> 
+    
+</body>
+</html>
+        
